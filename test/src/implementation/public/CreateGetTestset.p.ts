@@ -10,7 +10,7 @@ import * as api from "../../interface"
 
 import * as pub from "../../../../pub/dist"
 
-export const f_createGetTestset: api.FCreateGetTestset = ($d) => {
+export const fCreateGetTestset: api.FCreateGetTestset = ($d) => {
     return () => {
 
         const builder = pm.createDictionaryBuilder<test.TTestElement>(

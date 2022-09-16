@@ -1,8 +1,8 @@
 
-export * from "./public/f_getLengthAsString"
-export * from "./public/f_getNumberOfKeysAsString"
-export * from "./public/f_getKeysAsString"
-export * from "./public/f_getArrayAsString"
-export * from "./public/f_joinNestedStrings"
+export * from "./public/getLengthAsString.p"
+export * from "./public/getNumberOfKeysAsString.p"
+export * from "./public/getKeysAsString.p"
+export * from "./public/getArrayAsString.p"
+export * from "./public/joinNestedStrings.p"
 
 
