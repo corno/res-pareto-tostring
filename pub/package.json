@@ -18,7 +18,7 @@
     "url": "git+https://github.com/corno/res-pareto-tostring.git"
   },
   "types": "dist/index.d.ts",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "dependencies": {
     "api-pareto-tostring": "^0.4.0",
     "pareto-core-internals": "^0.7.0",
