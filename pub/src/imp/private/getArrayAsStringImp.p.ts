@@ -9,5 +9,5 @@ export const getArrayAsStringImp: api.FGetArrayAsString = (
     $.array.forEach(($) => {
         tmp.push($)
     })
-    return tmp.join($.separator)
+    return tmp.join($.separator === null ? "": $.separator)
 }

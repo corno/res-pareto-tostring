@@ -15,5 +15,5 @@ export const getKeysAsStringImp: api.FGetKeysAsString = (
         formatted.splice(maxAmount)
         formatted.push("...")
     }
-    return `${foundKeys.join($.separator)}`
+    return `${foundKeys.join($.separator === null ? "": $.separator)}`
 }
