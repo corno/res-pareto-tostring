@@ -21,8 +21,7 @@
   "version": "0.4.0",
   "dependencies": {
     "api-pareto-tostring": "^0.4.1",
-    "pareto-core": "^0.0.4",
     "pareto-core-internals": "^0.9.0"
   },
-  "content-fingerprint": "78f0b6dc37f6e397363331684087217f00675955"
+  "content-fingerprint": "9672e289e80c98ec7a06d49ec7de92ae96791cde"
 }
