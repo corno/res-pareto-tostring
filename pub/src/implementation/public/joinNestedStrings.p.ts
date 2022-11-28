@@ -1,5 +1,5 @@
 
-import * as api from "api-pareto-tostring"
+import * as api from "../../interface"
 import { joinNestedStringsImp } from "../private/joinNestedStringsImp.p"
 
 export const joinNestedStrings: api.FJoinNestedString = ($) => {

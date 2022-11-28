@@ -1,5 +1,5 @@
 
-import * as api from "api-pareto-tostring"
+import * as api from "../../interface"
 
 export const getNumberOfKeysAsStringImp: api.FGetNumberOfKeysAsString = (
     $

@@ -1,5 +1,5 @@
 
-import * as api from "api-pareto-tostring"
+import * as api from "../../interface"
 
 import { getNumberOfKeysAsStringImp } from "../private/getNumberOfKeysAsStringImp.p"
 

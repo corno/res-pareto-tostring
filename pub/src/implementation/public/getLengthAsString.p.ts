@@ -1,5 +1,5 @@
 
-import * as api from "api-pareto-tostring"
+import * as api from "../../interface"
 
 import { getLengthAsStringImp } from "../private/getLengthAsStringImp.p"
 

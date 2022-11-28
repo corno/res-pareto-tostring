@@ -1,6 +1,6 @@
 import * as pt from "pareto-core-types"
 
-import * as api from "api-pareto-tostring"
+import * as api from "../../interface"
 
 export const getArrayAsStringImp: api.FGetArrayAsString = (
     $

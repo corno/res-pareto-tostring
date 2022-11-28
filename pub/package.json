@@ -18,10 +18,10 @@
     "url": "git+https://github.com/corno/res-pareto-tostring.git"
   },
   "types": "dist/index.d.ts",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "dependencies": {
-    "api-pareto-tostring": "^0.4.1",
-    "pareto-core-internals": "^0.9.0"
+    "pareto-core-internals": "^0.11.0"
   },
-  "content-fingerprint": "9672e289e80c98ec7a06d49ec7de92ae96791cde"
+  "interface-fingerprint": "e61903b8d41960f154e7da2a1bfe5fa41529205a",
+  "content-fingerprint": "c58d4fb17d27885225e6d5e3919512a3fee98a9f"
 }
