@@ -5,4 +5,4 @@ import { DDependencies } from "../dependencies/dependencies.p"
 export type FCreateGetTestset = (
     $: null,
     $d: DDependencies
-) => test.FGetTestSet
+) => test.AGetTestSet

@@ -1,9 +1,7 @@
 import * as pi from "pareto-core-internals"
 
-import * as api from "../../interface"
+import * as api from "../api"
 
-export const joinNestedStringsImp: api.FJoinNestedString = (
-    $
-) => {
+export const ijoinNestedStrings: api.CjoinNestedStrings = ($) => {
     return pi.flatten($.strings).join($.separator === null ? "": $.separator)
 }
