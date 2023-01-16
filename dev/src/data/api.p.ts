@@ -3,8 +3,7 @@ import * as pr from "pareto-core-raw"
 import {
     externalReference as er,
     string as str,
-    nullType,
-    type,
+    null_,
     reference as ref,
     boolean as bln,
     number as nr,
@@ -12,6 +11,8 @@ import {
     template,
     dictionary, group as grp, member, taggedUnion, types, _function, group,
     array,
+    typeReference,
+    externalTypeReference,
 } from "lib-pareto-typescript-project/dist/modules/glossary/api/shorthands.p"
 
 import { string, reference, externalReference, number, boolean } from "lib-pareto-typescript-project/dist/modules/moduleDefinition/api/shorthands.p"
@@ -23,7 +24,7 @@ export const $: mmoduleDefinition.TModuleDefinition = {
     'glossary': {
         'imports': d({
             // "project": "../../project",
-            // "common": "glo-pareto-common",
+            "common": "glo-pareto-common",
             // "main": "glo-pareto-main",
         }),
         'namespace': {
@@ -34,10 +35,10 @@ export const $: mmoduleDefinition.TModuleDefinition = {
 
                 }),
                 "DictionaryAndSeparator": group({
-                    "dictionary": member(['dictionary', nullType()]),
+                    "dictionary": member(['dictionary', null_()]),
                     "separator": member(str()),
                 }),
-                "Dictionary": ['dictionary', nullType()],
+                "Dictionary": ['dictionary', null_()],
                 "NestedStrings": group({
                     "strings": member(nested(str())),
                     "separator": member(str()),
@@ -48,24 +49,24 @@ export const $: mmoduleDefinition.TModuleDefinition = {
         },
         'functions': d({
             "GetArrayAsString": {
-                'data': reference("StringArray"),
-                'return value': string()
+                'data': typeReference("StringArray"),
+                'return value': externalTypeReference("common", "String"),
             },
             "GetKeysAsString": {
-                'data': reference("DictionaryAndSeparator"),
-                'return value': string()
+                'data': typeReference("DictionaryAndSeparator"),
+                'return value': externalTypeReference("common", "String"),
             },
             // "GetLengthAsString": {
             //     'data': reference("Array"),
             //     'return value': string()
             // },
             "GetNumberOfKeysAsString": {
-                'data': reference("Dictionary"),
-                'return value': string()
+                'data': typeReference("Dictionary"),
+                'return value': externalTypeReference("common", "String"),
             },
             "JoinNestedStrings": {
-                'data': reference("NestedStrings"),
-                'return value': string()
+                'data': typeReference("NestedStrings"),
+                'return value': externalTypeReference("common", "String"),
             },
         }),
         'callbacks': d({

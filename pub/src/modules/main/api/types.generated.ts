@@ -1,4 +1,5 @@
 import * as pt from "pareto-core-types"
+import * as mcommon from "glo-pareto-common"
 
 export type TDictionary = pt.Dictionary<null>
 
@@ -17,10 +18,10 @@ export type TStringArray = {
     readonly "separator": string
 }
 
-export type FGetArrayAsString = ($: TStringArray) => string
+export type FGetArrayAsString = ($: TStringArray) => mcommon.TString
 
-export type FGetKeysAsString = ($: TDictionaryAndSeparator) => string
+export type FGetKeysAsString = ($: TDictionaryAndSeparator) => mcommon.TString
 
-export type FGetNumberOfKeysAsString = ($: TDictionary) => string
+export type FGetNumberOfKeysAsString = ($: TDictionary) => mcommon.TString
 
-export type FJoinNestedStrings = ($: TNestedStrings) => string
+export type FJoinNestedStrings = ($: TNestedStrings) => mcommon.TString

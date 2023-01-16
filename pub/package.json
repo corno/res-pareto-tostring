@@ -20,7 +20,8 @@
   "types": "dist/index.d.ts",
   "version": "0.5.0",
   "dependencies": {
+    "glo-pareto-common": "^0.2.0",
     "pareto-core-internals": "^0.11.0"
   },
-  "content-fingerprint": "b1a7f878de7d44fe5974ba6f33da96b537b0bb99"
+  "content-fingerprint": "c0e6012d2e61ac5b2ab04e2fb97662cb03e87b17"
 }
