@@ -7,8 +7,8 @@ import { ijoinNestedStrings } from "./implementations/joinNestedStrings.p"
 export * from "./api"
 
 export const $a: API = {
-    "getArrayAsString": igetArrayAsString,
-    "getKeysAsString": igetKeysAsString,
-    "getNumberOfKeysAsString": igetNumberOfKeysAsString,
-    "joinNestedStrings": ijoinNestedStrings,
+    'getArrayAsString': igetArrayAsString,
+    'getKeysAsString': igetKeysAsString,
+    'getNumberOfKeysAsString': igetNumberOfKeysAsString,
+    'joinNestedStrings': ijoinNestedStrings,
 }
