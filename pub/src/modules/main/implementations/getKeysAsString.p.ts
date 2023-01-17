@@ -1,7 +1,7 @@
 
 import * as api from "../api"
 
-export const igetKeysAsString: api.CgetKeysAsString = ($) => {
+export const $$: api.CgetKeysAsString = ($) => {
    const maxAmount = 10
    const foundKeys: string[] = []
    $.dictionary.map(($, key) => {
