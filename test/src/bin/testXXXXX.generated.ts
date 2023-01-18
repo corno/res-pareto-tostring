@@ -3,10 +3,10 @@ import * as pr from 'pareto-core-raw'
 import * as pl from 'pareto-core-lib'
 import * as tst from "lib-pareto-test"
 
-import { test as main_getArrayAsString } from "../modules/main/getArrayAsString.p"
-import { test as main_getKeysAsString } from "../modules/main/getKeysAsString.p"
-import { test as main_getNumberOfKeysAsString } from "../modules/main/getNumberOfKeysAsString.p"
-import { test as main_joinNestedStrings } from "../modules/main/joinNestedStrings.p"
+import { test as main_getArrayAsString } from "../modules/main/getArrayAsString.generated"
+import { test as main_getKeysAsString } from "../modules/main/getKeysAsString.generated"
+import { test as main_getNumberOfKeysAsString } from "../modules/main/getNumberOfKeysAsString.generated"
+import { test as main_joinNestedStrings } from "../modules/main/joinNestedStrings.generated"
 
 const x = pr.wrapRawDictionary<pt.Dictionary<() => pt.AsyncValue<tst.TTestElement>>>({
     'main': pr.wrapRawDictionary({
