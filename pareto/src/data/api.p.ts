@@ -48,30 +48,15 @@ export const $: mmoduleDefinition.TModuleDefinition = {
 
         },
         'functions': d({
-            "GetArrayAsString": {
-                'data': typeReference("StringArray"),
-                'return value': externalTypeReference("common", "String"),
-            },
-            "GetKeysAsString": {
-                'data': typeReference("DictionaryAndSeparator"),
-                'return value': externalTypeReference("common", "String"),
-            },
+            "GetArrayAsString": _function(typeReference("StringArray"), externalTypeReference("common", "String")),
+            "GetKeysAsString": _function(typeReference("DictionaryAndSeparator"),externalTypeReference("common", "String")),
             // "GetLengthAsString": {
             //     'data': reference("Array"),
             //     'return value': string()
             // },
-            "GetNumberOfKeysAsString": {
-                'data': typeReference("Dictionary"),
-                'return value': externalTypeReference("common", "String"),
-            },
-            "JoinNestedStrings": {
-                'data': typeReference("NestedStrings"),
-                'return value': externalTypeReference("common", "String"),
-            },
+            "GetNumberOfKeysAsString":_function(typeReference("Dictionary"), externalTypeReference("common", "String")),
+            "JoinNestedStrings": _function( typeReference("NestedStrings"),externalTypeReference("common", "String")),
         }),
-        'callbacks': d({
-        }),
-        'pipes': d({}),
     },
     'api': {
         'imports': d({
@@ -79,33 +64,33 @@ export const $: mmoduleDefinition.TModuleDefinition = {
         }),
         'algorithms': d({
             "getArrayAsString": {
-                'definition': ['function', {
+                'definition': {
                     'function': "GetArrayAsString"
-                }],
+                },
                 'type': ['reference', null],
             },
             "getKeysAsString": {
-                'definition': ['function', {
+                'definition': {
                     'function': "GetKeysAsString"
-                }],
+                },
                 'type': ['reference', null],
             },
             // "getLengthAsString": {
-            //     'definition': ['function', {
+            //     'definition': {
             //         'function': "GetArrayAsString"
-            //     }],
+            //     },
             //     'type': ['reference', null],
             // },
             "getNumberOfKeysAsString": {
-                'definition': ['function', {
+                'definition': {
                     'function': "GetNumberOfKeysAsString"
-                }],
+                },
                 'type': ['reference', null],
             },
             "joinNestedStrings": {
-                'definition': ['function', {
+                'definition':{
                     'function': "JoinNestedStrings"
-                }],
+                },
                 'type': ['reference', null],
             },
         })

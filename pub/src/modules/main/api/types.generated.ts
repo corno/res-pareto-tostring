@@ -18,10 +18,10 @@ export type TStringArray = {
     readonly 'separator': string
 }
 
-export type FGetArrayAsString = ($: TStringArray) => mcommon.TString
+export type FGetArrayAsString = ($: TStringArray,) => mcommon.TString
 
-export type FGetKeysAsString = ($: TDictionaryAndSeparator) => mcommon.TString
+export type FGetKeysAsString = ($: TDictionaryAndSeparator,) => mcommon.TString
 
-export type FGetNumberOfKeysAsString = ($: TDictionary) => mcommon.TString
+export type FGetNumberOfKeysAsString = ($: TDictionary,) => mcommon.TString
 
-export type FJoinNestedStrings = ($: TNestedStrings) => mcommon.TString
+export type FJoinNestedStrings = ($: TNestedStrings,) => mcommon.TString
