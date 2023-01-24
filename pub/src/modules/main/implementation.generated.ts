@@ -1,8 +1,8 @@
 import { API } from "./api"
-import { $$ as igetArrayAsString } from "./implementations/getArrayAsString.p"
-import { $$ as igetKeysAsString } from "./implementations/getKeysAsString.p"
-import { $$ as igetNumberOfKeysAsString } from "./implementations/getNumberOfKeysAsString.p"
-import { $$ as ijoinNestedStrings } from "./implementations/joinNestedStrings.p"
+import { $$ as igetArrayAsString } from "./implementations/getArrayAsString.native"
+import { $$ as igetKeysAsString } from "./implementations/getKeysAsString.native"
+import { $$ as igetNumberOfKeysAsString } from "./implementations/getNumberOfKeysAsString.native"
+import { $$ as ijoinNestedStrings } from "./implementations/joinNestedStrings.native"
 
 export const $a: API = {
     'getArrayAsString': igetArrayAsString,
