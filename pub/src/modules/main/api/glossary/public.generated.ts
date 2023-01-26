@@ -1,22 +1,16 @@
 import * as pt from 'pareto-core-types'
+
+import * as t from './types.generated'
+
 import * as mcommon from "glo-pareto-common"
 
-export type TDictionary = pt.Dictionary<null>
+export type TDictionary = t.UDictionary
 
-export type TDictionaryAndSeparator = {
-    readonly 'dictionary': pt.Dictionary<null>
-    readonly 'separator': string
-}
+export type TDictionaryAndSeparator = t.UDictionaryAndSeparator
 
-export type TNestedStrings = {
-    readonly 'separator': string
-    readonly 'strings': pt.Nested<string>
-}
+export type TNestedStrings = t.UNestedStrings
 
-export type TStringArray = {
-    readonly 'array': pt.Array<string>
-    readonly 'separator': string
-}
+export type TStringArray = t.UStringArray
 
 export type FGetArrayAsString = ($: TStringArray,) => mcommon.TString
 

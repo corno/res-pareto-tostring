@@ -28,35 +28,32 @@ export const $: mmoduleDefinition.TModuleDefinition = {
             // "main": "glo-pareto-main",
         }),
         'parameters': d({}),
-        'namespace': {
-            'types': types({
-                "StringArray": group({
-                    "array": member(array(str())),
-                    "separator": member(str()),
+        'types': types({
+            "StringArray": group({
+                "array": member(array(str())),
+                "separator": member(str()),
 
-                }),
-                "DictionaryAndSeparator": group({
-                    "dictionary": member(['dictionary', null_()]),
-                    "separator": member(str()),
-                }),
-                "Dictionary": ['dictionary', null_()],
-                "NestedStrings": group({
-                    "strings": member(nested(str())),
-                    "separator": member(str()),
-                }),
             }),
-            'interfaces': d({}),
-
-        },
+            "DictionaryAndSeparator": group({
+                "dictionary": member(['dictionary', null_()]),
+                "separator": member(str()),
+            }),
+            "Dictionary": ['dictionary', null_()],
+            "NestedStrings": group({
+                "strings": member(nested(str())),
+                "separator": member(str()),
+            }),
+        }),
+        'interfaces': d({}),
         'functions': d({
             "GetArrayAsString": _function(typeReference("StringArray"), externalTypeReference("common", "String")),
-            "GetKeysAsString": _function(typeReference("DictionaryAndSeparator"),externalTypeReference("common", "String")),
+            "GetKeysAsString": _function(typeReference("DictionaryAndSeparator"), externalTypeReference("common", "String")),
             // "GetLengthAsString": {
             //     'data': reference("Array"),
             //     'return value': string()
             // },
-            "GetNumberOfKeysAsString":_function(typeReference("Dictionary"), externalTypeReference("common", "String")),
-            "JoinNestedStrings": _function( typeReference("NestedStrings"),externalTypeReference("common", "String")),
+            "GetNumberOfKeysAsString": _function(typeReference("Dictionary"), externalTypeReference("common", "String")),
+            "JoinNestedStrings": _function(typeReference("NestedStrings"), externalTypeReference("common", "String")),
         }),
     },
     'api': {
@@ -89,7 +86,7 @@ export const $: mmoduleDefinition.TModuleDefinition = {
                 'type': ['reference', null],
             },
             "joinNestedStrings": {
-                'definition':{
+                'definition': {
                     'function': "JoinNestedStrings"
                 },
                 'type': ['reference', null],
