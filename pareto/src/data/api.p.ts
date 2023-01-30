@@ -5,14 +5,16 @@ import {
     null_,
     nested,
     template,
-    dictionary, member, taggedUnion, types, _function, group,
+    dictionary, member, taggedUnion, types, group,
     array,
     typeReference,
-} from "lib-pareto-typescript-project/dist/modules/glossary/api/shorthands.p"
+    data,
+    func,
+} from "lib-pareto-typescript-project/dist/submodules/glossary/shorthands.p"
 
-import { definitionReference, constructor, algorithm } from "lib-pareto-typescript-project/dist/modules/moduleDefinition/api/shorthands.p"
+import { definitionReference, constructor, algorithm } from "lib-pareto-typescript-project/dist/submodules/moduleDefinition/shorthands.p"
 
-import * as mmoduleDefinition from "lib-pareto-typescript-project/dist/modules/moduleDefinition"
+import * as mmoduleDefinition from "lib-pareto-typescript-project/dist/submodules/moduleDefinition"
 const d = pr.wrapRawDictionary
 
 export const $: mmoduleDefinition.TModuleDefinition = {
@@ -40,10 +42,10 @@ export const $: mmoduleDefinition.TModuleDefinition = {
         }),
         'interfaces': d({}),
         'functions': d({
-            "GetArrayAsString": _function(typeReference("StringArray"), typeReference("common", "String")),
-            "GetKeysAsString": _function(typeReference("DictionaryAndSeparator"), typeReference("common", "String")),
-            "GetNumberOfKeysAsString": _function(typeReference("Dictionary"), typeReference("common", "String")),
-            "JoinNestedStrings": _function(typeReference("NestedStrings"), typeReference("common", "String")),
+            "GetArrayAsString": func(typeReference("StringArray"), null, null, data(typeReference("common", "String"),false)),
+            "GetKeysAsString": func(typeReference("DictionaryAndSeparator"), null, null, data(typeReference("common", "String"),false)),
+            "GetNumberOfKeysAsString": func(typeReference("Dictionary"), null, null, data(typeReference("common", "String"),false)),
+            "JoinNestedStrings": func(typeReference("NestedStrings"), null, null, data(typeReference("common", "String"),false)),
         }),
     },
     'api': {
