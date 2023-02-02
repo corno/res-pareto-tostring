@@ -1,21 +1,18 @@
 {
-  "name": "res-pareto-collation",
   "author": "Corno",
   "license": "ISC",
   "description": "a pareto wrapper to create strings from complex types (dictionaries, arrays, nested types etcetera). Useful for (error) reporting. Should not be used in core functionality",
+
   "dependencies": {
-    "glo-pareto-common": "^0.10.0",
+    "glo-pareto-common": "^0.11.0",
     "pareto-core-internals": "^0.11.0"
   },
   "files": [
     "dist"
   ],
   "repository": {
-    "type": "git",
-    "url": "http://github.com/corno/res-pareto-collation.git"
+    "type": "git"
   },
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "version": "0.0.0",
-  "content-fingerprint": "2243414a78301dbcf5b8ee5638bbf6de16513e90"
+  "types": "dist/index.d.ts"
 }
