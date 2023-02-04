@@ -2,6 +2,7 @@
   "author": "Corno",
   "license": "ISC",
   "description": "a pareto wrapper to create strings from complex types (dictionaries, arrays, nested types etcetera). Useful for (error) reporting. Should not be used in core functionality",
+
   "dependencies": {
     "glo-pareto-common": "^0.11.0",
     "pareto-core-internals": "^0.11.0"
@@ -10,12 +11,8 @@
     "dist"
   ],
   "repository": {
-    "type": "git",
-    "url": "http://github.com/corno/res-pareto-tostring.git"
+    "type": "git"
   },
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "name": "res-pareto-tostring",
-  "version": "0.13.0",
-  "content-fingerprint": "ac8b54ea0d3cdab579f681ef7d3724909fc5c8f3"
+  "types": "dist/index.d.ts"
 }
