@@ -2,39 +2,63 @@ import * as pt from 'pareto-core-types'
 
 import * as mcommon from "glo-pareto-common"
 
-export namespace GDictionary {}
-export type GDictionary = pt.Dictionary<null>
-export type UDictionary = GDictionary
-
-export namespace GDictionaryAndSeparator {
+export namespace T {
     
-    export namespace Pdictionary {}
-    export type Pdictionary = pt.Dictionary<null>
-}
-export type GDictionaryAndSeparator = {
-    readonly 'dictionary': GDictionaryAndSeparator.Pdictionary
-    readonly 'separator': string
-}
-export type UDictionaryAndSeparator = GDictionaryAndSeparator
-
-export namespace GNestedStrings {
+    export namespace Dictionary {
+        
+        export type D = null
+    }
     
-    export namespace Pstrings {}
-    export type Pstrings = pt.Nested<string>
-}
-export type GNestedStrings = {
-    readonly 'separator': string
-    readonly 'strings': GNestedStrings.Pstrings
-}
-export type UNestedStrings = GNestedStrings
-
-export namespace GStringArray {
+    export type Dictionary = pt.Dictionary<null>
     
-    export namespace Parray {}
-    export type Parray = pt.Array<string>
+    export namespace DictionaryAndSeparator {
+        
+        export namespace dictionary {
+            
+            export type D = null
+        }
+        
+        export type dictionary = pt.Dictionary<null>
+        
+        export type separator = string
+    }
+    
+    export type DictionaryAndSeparator = {
+        readonly 'dictionary': pt.Dictionary<null>
+        readonly 'separator': string
+    }
+    
+    export namespace NestedStrings {
+        
+        export type separator = string
+        
+        export namespace strings {
+            
+            export type N = string
+        }
+        
+        export type strings = pt.Nested<string>
+    }
+    
+    export type NestedStrings = {
+        readonly 'separator': string
+        readonly 'strings': pt.Nested<string>
+    }
+    
+    export namespace StringArray {
+        
+        export namespace array {
+            
+            export type A = string
+        }
+        
+        export type array = pt.Array<string>
+        
+        export type separator = string
+    }
+    
+    export type StringArray = {
+        readonly 'array': pt.Array<string>
+        readonly 'separator': string
+    }
 }
-export type GStringArray = {
-    readonly 'array': GStringArray.Parray
-    readonly 'separator': string
-}
-export type UStringArray = GStringArray

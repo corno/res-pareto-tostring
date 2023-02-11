@@ -4,12 +4,12 @@ import {
     string,
     null_,
     nested,
-    template,
     dictionary, member, taggedUnion, types, group,
     array,
     typeReference,
     data,
     func,
+    type,
 } from "lib-pareto-typescript-project/dist/submodules/glossary/shorthands.p"
 
 import { definitionReference, constructor, algorithm } from "lib-pareto-typescript-project/dist/submodules/moduleDefinition/shorthands.p"
@@ -17,28 +17,27 @@ import { definitionReference, constructor, algorithm } from "lib-pareto-typescri
 import * as mmoduleDefinition from "lib-pareto-typescript-project/dist/submodules/moduleDefinition"
 const d = pr.wrapRawDictionary
 
-export const $: mmoduleDefinition.TModuleDefinition = {
+export const $: mmoduleDefinition.T.ModuleDefinition = {
     'glossary': {
         'imports': d({
             "common": "glo-pareto-common",
         }),
         'parameters': d({}),
-        'templates': d({}),
-        'types': types({
-            "StringArray": group({
+        'types': d({
+            "StringArray": type( group({
                 "array": member(array(string())),
                 "separator": member(string()),
 
-            }),
-            "DictionaryAndSeparator": group({
+            })),
+            "DictionaryAndSeparator": type(group({
                 "dictionary": member(dictionary(null_())),
                 "separator": member(string()),
-            }),
-            "Dictionary": dictionary(null_()),
-            "NestedStrings": group({
+            })),
+            "Dictionary": type( dictionary(null_())),
+            "NestedStrings": type( group({
                 "strings": member(nested(string())),
                 "separator": member(string()),
-            }),
+            })),
         }),
         'interfaces': d({}),
         'functions': d({
