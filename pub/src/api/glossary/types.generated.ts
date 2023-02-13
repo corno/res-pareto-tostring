@@ -11,7 +11,7 @@ export namespace T {
     
     export type Dictionary = pt.Dictionary<null>
     
-    export namespace DictionaryAndSeparator {
+    export namespace KeysAsStringData {
         
         export namespace dictionary {
             
@@ -20,11 +20,35 @@ export namespace T {
         
         export type dictionary = pt.Dictionary<null>
         
+        export namespace maximum {
+            
+            export namespace O {
+                
+                export type maximum = number
+                
+                export type suffix = string
+            }
+            
+            export type O = {
+                readonly 'maximum': number
+                readonly 'suffix': string
+            }
+        }
+        
+        export type maximum = [ false ] | [ true, {
+            readonly 'maximum': number
+            readonly 'suffix': string
+        }]
+        
         export type separator = string
     }
     
-    export type DictionaryAndSeparator = {
+    export type KeysAsStringData = {
         readonly 'dictionary': pt.Dictionary<null>
+        readonly 'maximum': [ false ] | [ true, {
+            readonly 'maximum': number
+            readonly 'suffix': string
+        }]
         readonly 'separator': string
     }
     

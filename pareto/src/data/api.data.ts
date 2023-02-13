@@ -10,6 +10,8 @@ import {
     data,
     func,
     type,
+    optional,
+    number,
 } from "lib-pareto-typescript-project/dist/submodules/glossary/shorthands.p"
 
 import { definitionReference, constructor, algorithm } from "lib-pareto-typescript-project/dist/submodules/moduleDefinition/shorthands.p"
@@ -24,27 +26,31 @@ export const $: mmoduleDefinition.T.ModuleDefinition = {
         }),
         'parameters': d({}),
         'types': d({
-            "StringArray": type( group({
+            "StringArray": type(group({
                 "array": member(array(string())),
                 "separator": member(string()),
 
             })),
-            "DictionaryAndSeparator": type(group({
+            "KeysAsStringData": type(group({
                 "dictionary": member(dictionary(null_())),
                 "separator": member(string()),
+                "maximum": member(optional(group({
+                    "maximum": member(number()),
+                    "suffix": member(string())
+                }))),
             })),
-            "Dictionary": type( dictionary(null_())),
-            "NestedStrings": type( group({
+            "Dictionary": type(dictionary(null_())),
+            "NestedStrings": type(group({
                 "strings": member(nested(string())),
                 "separator": member(string()),
             })),
         }),
         'interfaces': d({}),
         'functions': d({
-            "GetArrayAsString": func(typeReference("StringArray"), null, null, data(typeReference("common", "String"),false)),
-            "GetKeysAsString": func(typeReference("DictionaryAndSeparator"), null, null, data(typeReference("common", "String"),false)),
-            "GetNumberOfKeysAsString": func(typeReference("Dictionary"), null, null, data(typeReference("common", "String"),false)),
-            "JoinNestedStrings": func(typeReference("NestedStrings"), null, null, data(typeReference("common", "String"),false)),
+            "GetArrayAsString": func(typeReference("StringArray"), null, null, data(typeReference("common", "String"), false)),
+            "GetKeysAsString": func(typeReference("KeysAsStringData"), null, null, data(typeReference("common", "String"), false)),
+            "GetNumberOfKeysAsString": func(typeReference("Dictionary"), null, null, data(typeReference("common", "String"), false)),
+            "JoinNestedStrings": func(typeReference("NestedStrings"), null, null, data(typeReference("common", "String"), false)),
         }),
     },
     'api': {
