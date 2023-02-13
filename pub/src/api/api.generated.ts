@@ -7,7 +7,7 @@ export type CgetArrayAsString = ($: glo.T.Configuration, $d: {}) => glo.FGetArra
 
 export type CgetKeysAsString = ($: glo.T.Configuration, $d: {}) => glo.FGetKeysAsString
 
-export type CgetLengthAsString = glo.FGetArrayAsString
+export type CgetLengthAsString = glo.FGetLengthAsString
 
 export type CgetNumberOfKeysAsString = glo.FGetNumberOfKeysAsString
 

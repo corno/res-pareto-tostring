@@ -55,7 +55,7 @@ export const $: mmoduleDefinition.T.ModuleDefinition = {
         }),
         'algorithms': d({
             "getArrayAsString": algorithm(definitionReference("GetArrayAsString"), constructor(typeReference("Configuration"), {})),
-            "getLengthAsString": algorithm(definitionReference("GetArrayAsString")),
+            "getLengthAsString": algorithm(definitionReference("GetLengthAsString")),
             "getKeysAsString": algorithm(definitionReference("GetKeysAsString"), constructor(typeReference("Configuration"), {})),
             "getNumberOfKeysAsString": algorithm(definitionReference("GetNumberOfKeysAsString")),
             "joinNestedStrings": algorithm(definitionReference("JoinNestedStrings")),
