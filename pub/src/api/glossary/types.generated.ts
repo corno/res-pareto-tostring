@@ -61,6 +61,13 @@ export namespace T {
         readonly 'strings': pt.Nested<string>
     }
     
+    export namespace NullArray {
+        
+        export type A = null
+    }
+    
+    export type NullArray = pt.Array<null>
+    
     export namespace StringArray {
         
         export type A = string

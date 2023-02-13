@@ -8,6 +8,8 @@ export type FGetArrayAsString = ($: T.StringArray,) => mcommon.T.String
 
 export type FGetKeysAsString = ($: T.Dictionary,) => mcommon.T.String
 
+export type FGetLengthAsString = ($: T.NullArray,) => mcommon.T.String
+
 export type FGetNumberOfKeysAsString = ($: T.Dictionary,) => mcommon.T.String
 
 export type FJoinNestedStrings = ($: T.NestedStrings,) => mcommon.T.String
