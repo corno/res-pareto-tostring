@@ -26,13 +26,8 @@ export const $: mmoduleDefinition.T.ModuleDefinition = {
         }),
         'parameters': d({}),
         'types': d({
-            "StringArray": type(group({
-                "array": member(array(string())),
-                "separator": member(string()),
-
-            })),
-            "KeysAsStringData": type(group({
-                "dictionary": member(dictionary(null_())),
+            "StringArray": type(array(string())),
+            "Configuration": type(group({
                 "separator": member(string()),
                 "maximum": member(optional(group({
                     "maximum": member(number()),
@@ -48,7 +43,7 @@ export const $: mmoduleDefinition.T.ModuleDefinition = {
         'interfaces': d({}),
         'functions': d({
             "GetArrayAsString": func(typeReference("StringArray"), null, null, data(typeReference("common", "String"), false)),
-            "GetKeysAsString": func(typeReference("KeysAsStringData"), null, null, data(typeReference("common", "String"), false)),
+            "GetKeysAsString": func(typeReference("Dictionary"), null, null, data(typeReference("common", "String"), false)),
             "GetNumberOfKeysAsString": func(typeReference("Dictionary"), null, null, data(typeReference("common", "String"), false)),
             "JoinNestedStrings": func(typeReference("NestedStrings"), null, null, data(typeReference("common", "String"), false)),
         }),
@@ -57,8 +52,8 @@ export const $: mmoduleDefinition.T.ModuleDefinition = {
         'imports': d({
         }),
         'algorithms': d({
-            "getArrayAsString": algorithm(definitionReference("GetArrayAsString")),
-            "getKeysAsString": algorithm(definitionReference("GetKeysAsString")),
+            "getArrayAsString": algorithm(definitionReference("GetArrayAsString"), constructor(typeReference("Configuration"), {})),
+            "getKeysAsString": algorithm(definitionReference("GetKeysAsString"), constructor(typeReference("Configuration"), {})),
             "getNumberOfKeysAsString": algorithm(definitionReference("GetNumberOfKeysAsString")),
             "joinNestedStrings": algorithm(definitionReference("JoinNestedStrings")),
         })

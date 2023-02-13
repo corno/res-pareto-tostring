@@ -3,9 +3,9 @@ import * as pt from 'pareto-core-types'
 import * as glo from "./glossary"
 
 
-export type CgetArrayAsString = glo.FGetArrayAsString
+export type CgetArrayAsString = ($: glo.T.Configuration, $d: {}) => glo.FGetArrayAsString
 
-export type CgetKeysAsString = glo.FGetKeysAsString
+export type CgetKeysAsString = ($: glo.T.Configuration, $d: {}) => glo.FGetKeysAsString
 
 export type CgetNumberOfKeysAsString = glo.FGetNumberOfKeysAsString
 

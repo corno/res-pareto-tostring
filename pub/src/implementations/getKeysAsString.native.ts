@@ -1,19 +1,14 @@
 
 import * as api from "../api"
+import { post } from "../native/post.native"
 
-export const $$: api.CgetKeysAsString = ($) => {
-   const foundKeys: string[] = []
-   $.dictionary.map(($, key) => {
-      foundKeys.push(key)
-   })
+export const $$: api.CgetKeysAsString = ($c) => {
+   return ($) => {
+      const foundKeys: string[] = []
+      $.map(($, key) => {
+         foundKeys.push(key)
+      })
 
-   const formatted = foundKeys.map($ => `'${$}'`)
-   if ($.maximum[0] === true) {
-      const maxAmount = $.maximum[1].maximum
-      if (foundKeys.length > maxAmount) {
-         formatted.splice(maxAmount)
-         formatted.push($.maximum[1].suffix)
-     }
+      return post(foundKeys, $c)
    }
-   return `${foundKeys.join($.separator === null ? "": $.separator)}`
 }

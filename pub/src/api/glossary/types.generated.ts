@@ -4,21 +4,7 @@ import * as mcommon from "glo-pareto-common"
 
 export namespace T {
     
-    export namespace Dictionary {
-        
-        export type D = null
-    }
-    
-    export type Dictionary = pt.Dictionary<null>
-    
-    export namespace KeysAsStringData {
-        
-        export namespace dictionary {
-            
-            export type D = null
-        }
-        
-        export type dictionary = pt.Dictionary<null>
+    export namespace Configuration {
         
         export namespace maximum {
             
@@ -43,14 +29,20 @@ export namespace T {
         export type separator = string
     }
     
-    export type KeysAsStringData = {
-        readonly 'dictionary': pt.Dictionary<null>
+    export type Configuration = {
         readonly 'maximum': [ false ] | [ true, {
             readonly 'maximum': number
             readonly 'suffix': string
         }]
         readonly 'separator': string
     }
+    
+    export namespace Dictionary {
+        
+        export type D = null
+    }
+    
+    export type Dictionary = pt.Dictionary<null>
     
     export namespace NestedStrings {
         
@@ -71,18 +63,8 @@ export namespace T {
     
     export namespace StringArray {
         
-        export namespace array {
-            
-            export type A = string
-        }
-        
-        export type array = pt.Array<string>
-        
-        export type separator = string
+        export type A = string
     }
     
-    export type StringArray = {
-        readonly 'array': pt.Array<string>
-        readonly 'separator': string
-    }
+    export type StringArray = pt.Array<string>
 }
