@@ -11,16 +11,24 @@ export const $: mproject.T.Project = {
     'description': "a pareto wrapper to create strings from complex types (dictionaries, arrays, nested types etcetera). Useful for (error) reporting. Should not be used in core functionality",
     'license': "ISC",
     
-    'pubdependencies': d({
+    'dependencies': d({
         "glo-pareto-common": {},
     }),
     'type': ['resource', {
         'definition': api,
+        'nativeDependencies': d({}),
         'devDependencies': d({
         }),
         'test': {
             'dependencies': d({
             }),
+            'glossary': {
+                'functions': d({}),
+                'imports': d({}),
+                'parameters': d({}),
+                'types': d({}),
+                'interfaces': d({}),
+            },
         }
     }],
 }
