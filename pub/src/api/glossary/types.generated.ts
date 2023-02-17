@@ -46,20 +46,10 @@ export namespace T {
     
     export namespace NestedStrings {
         
-        export type separator = string
-        
-        export namespace strings {
-            
-            export type N = string
-        }
-        
-        export type strings = pt.Nested<string>
+        export type N = string
     }
     
-    export type NestedStrings = {
-        readonly 'separator': string
-        readonly 'strings': pt.Nested<string>
-    }
+    export type NestedStrings = pt.Nested<string>
     
     export namespace NullArray {
         

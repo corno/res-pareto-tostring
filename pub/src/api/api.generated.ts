@@ -11,7 +11,7 @@ export type CgetLengthAsString = glo.FGetLengthAsString
 
 export type CgetNumberOfKeysAsString = glo.FGetNumberOfKeysAsString
 
-export type CjoinNestedStrings = glo.FJoinNestedStrings
+export type CjoinNestedStrings = ($: glo.T.Configuration, $d: {}) => glo.FJoinNestedStrings
 
 export type API = {
     getArrayAsString: CgetArrayAsString

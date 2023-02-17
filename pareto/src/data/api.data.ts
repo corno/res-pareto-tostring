@@ -36,10 +36,7 @@ export const $: mmoduleDefinition.T.ModuleDefinition = {
                 }))),
             })),
             "Dictionary": type(dictionary(null_())),
-            "NestedStrings": type(group({
-                "strings": member(nested(string())),
-                "separator": member(string()),
-            })),
+            "NestedStrings": type(nested(string())),
         }),
         'interfaces': d({}),
         'functions': d({
@@ -58,7 +55,7 @@ export const $: mmoduleDefinition.T.ModuleDefinition = {
             "getLengthAsString": algorithm(definitionReference("GetLengthAsString")),
             "getKeysAsString": algorithm(definitionReference("GetKeysAsString"), constructor(typeReference("Configuration"), {})),
             "getNumberOfKeysAsString": algorithm(definitionReference("GetNumberOfKeysAsString")),
-            "joinNestedStrings": algorithm(definitionReference("JoinNestedStrings")),
+            "joinNestedStrings": algorithm(definitionReference("JoinNestedStrings"), constructor(typeReference("Configuration"), {})),
         })
     },
 }
