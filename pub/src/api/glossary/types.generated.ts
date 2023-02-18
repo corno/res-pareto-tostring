@@ -44,13 +44,6 @@ export namespace T {
     
     export type Dictionary = pt.Dictionary<null>
     
-    export namespace NestedStrings {
-        
-        export type N = string
-    }
-    
-    export type NestedStrings = pt.Nested<string>
-    
     export namespace NullArray {
         
         export type A = null

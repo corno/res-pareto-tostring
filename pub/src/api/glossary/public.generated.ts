@@ -12,4 +12,4 @@ export type FGetLengthAsString = ($: T.NullArray,) => mcommon.T.String
 
 export type FGetNumberOfKeysAsString = ($: T.Dictionary,) => mcommon.T.String
 
-export type FJoinNestedStrings = ($: T.NestedStrings,) => mcommon.T.String
+export type FJoinNestedStrings = ($: mcommon.T.Path,) => mcommon.T.String

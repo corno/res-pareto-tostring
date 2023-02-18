@@ -36,7 +36,6 @@ export const $: mmoduleDefinition.T.ModuleDefinition = {
                 }))),
             })),
             "Dictionary": type(dictionary(null_())),
-            "NestedStrings": type(nested(string())),
         }),
         'interfaces': d({}),
         'functions': d({
@@ -44,7 +43,7 @@ export const $: mmoduleDefinition.T.ModuleDefinition = {
             "GetArrayAsString": func(typeReference("StringArray"), null, null, data(typeReference("common", "String"), false)),
             "GetKeysAsString": func(typeReference("Dictionary"), null, null, data(typeReference("common", "String"), false)),
             "GetNumberOfKeysAsString": func(typeReference("Dictionary"), null, null, data(typeReference("common", "String"), false)),
-            "JoinNestedStrings": func(typeReference("NestedStrings"), null, null, data(typeReference("common", "String"), false)),
+            "JoinNestedStrings": func(typeReference("common", "Path"), null, null, data(typeReference("common", "String"), false)),
         }),
     },
     'api': {
