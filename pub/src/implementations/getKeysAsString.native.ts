@@ -5,7 +5,7 @@ import { post } from "../native/post.native"
 export const $$: api.CgetKeysAsString = ($c) => {
    return ($) => {
       const foundKeys: string[] = []
-      $.map(($, key) => {
+      $.__mapWithKey(($, key) => {
          foundKeys.push(key)
       })
 

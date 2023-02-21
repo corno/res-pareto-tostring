@@ -6,7 +6,7 @@ import { post } from '../native/post.native'
 export const $$: api.CgetArrayAsString = ($c, $d) => {
   return ($) => {
     const tmp: string[] = []
-    $.forEach(($) => {
+    $.__forEach(($) => {
       tmp.push($)
     })
     return post(tmp, $c)
