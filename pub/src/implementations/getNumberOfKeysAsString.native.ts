@@ -1,7 +1,7 @@
 
-import * as api from "../api"
+import * as mapi from "../api"
 
-export const $$: api.CgetNumberOfKeysAsString = ($) => {
+export const $$: mapi.CgetNumberOfKeysAsString = ($) => {
    let count = 0
    $.map(($) => {
        count += 1
