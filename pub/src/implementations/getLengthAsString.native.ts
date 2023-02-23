@@ -1,6 +1,8 @@
 
-import * as mapi from "../api"
 
-export const $$: mapi.CgetLengthAsString = ($) => {
+
+import { CgetLengthAsString } from "../api"
+
+export const $$:CgetLengthAsString = ($) => {
    return `${$.__getLength()}`
 }

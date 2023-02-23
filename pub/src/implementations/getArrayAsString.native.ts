@@ -1,8 +1,10 @@
 
-import * as mapi from "../api"
+
 import { post } from '../native/post.native'
 
-export const $$: mapi.CgetArrayAsString = ($c, $d) => {
+import { CgetArrayAsString } from "../api"
+
+export const $$:CgetArrayAsString = ($c, $d) => {
   return ($) => {
     const tmp: string[] = []
     $.__forEach(($) => {

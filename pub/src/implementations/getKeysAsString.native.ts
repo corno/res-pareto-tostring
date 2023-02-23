@@ -1,8 +1,10 @@
 
-import * as mapi from "../api"
+
 import { post } from "../native/post.native"
 
-export const $$: mapi.CgetKeysAsString = ($c) => {
+import { CgetKeysAsString } from "../api"
+
+export const $$:CgetKeysAsString = ($c) => {
    return ($) => {
       const foundKeys: string[] = []
       $.__mapWithKey(($, key) => {
