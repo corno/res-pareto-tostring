@@ -1,17 +1,16 @@
 import * as pt from 'pareto-core-types'
 
-import * as gglo from "./glossary"
+import * as gthis from "./glossary"
 
+export type CgetArrayAsString = ($: gthis.T.Configuration, $d: {}) => gthis.FGetArrayAsString
 
-export type CgetArrayAsString = ($: gglo.T.Configuration, $d: {}) => gglo.FGetArrayAsString
+export type CgetKeysAsString = ($: gthis.T.Configuration, $d: {}) => gthis.FGetKeysAsString
 
-export type CgetKeysAsString = ($: gglo.T.Configuration, $d: {}) => gglo.FGetKeysAsString
+export type CgetLengthAsString = gthis.FGetLengthAsString
 
-export type CgetLengthAsString = gglo.FGetLengthAsString
+export type CgetNumberOfKeysAsString = gthis.FGetNumberOfKeysAsString
 
-export type CgetNumberOfKeysAsString = gglo.FGetNumberOfKeysAsString
-
-export type CjoinNestedStrings = ($: gglo.T.Configuration, $d: {}) => gglo.FJoinNestedStrings
+export type CjoinNestedStrings = ($: gthis.T.Configuration, $d: {}) => gthis.FJoinNestedStrings
 
 export type API = {
     getArrayAsString: CgetArrayAsString

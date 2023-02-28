@@ -4,6 +4,7 @@ import * as gproject from "lib-pareto-typescript-project/dist/submodules/project
 
 const d = pd.d
 
+import { $ as glossary } from "./glossary.data"
 import { $ as api } from "./api.data"
 
 export const $: gproject.T.Project<pd.SourceLocation> = {
@@ -15,7 +16,10 @@ export const $: gproject.T.Project<pd.SourceLocation> = {
         "glo-pareto-common": {},
     }),
     'type': ['resource', {
-        'definition': api,
+        'definition': {
+            'glossary': glossary,
+            'api': api,
+        },
         'nativeDependencies': d({}),
         'devDependencies': d({
         }),
