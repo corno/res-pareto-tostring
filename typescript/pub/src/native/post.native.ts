@@ -1,8 +1,8 @@
-import * as api from "../api"
+import * as gthis from "../definition/glossary"
 
 export function post(
     arr: string[],
-    conf: api.T.Configuration
+    conf: gthis.T.Configuration
 ) {
     const formatted = arr.map($ => `'${$}'`)
     if (conf.maximum[0] === true) {

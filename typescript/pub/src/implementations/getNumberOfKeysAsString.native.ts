@@ -1,7 +1,7 @@
 
 
 
-import { CgetNumberOfKeysAsString } from "../api"
+import { CgetNumberOfKeysAsString } from "../definition/api.generated"
 
 export const $$:CgetNumberOfKeysAsString = ($) => {
    let count = 0

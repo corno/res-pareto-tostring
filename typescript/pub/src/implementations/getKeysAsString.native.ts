@@ -2,7 +2,7 @@
 
 import { post } from "../native/post.native"
 
-import { CgetKeysAsString } from "../api"
+import { CgetKeysAsString } from "../definition/api.generated"
 
 export const $$:CgetKeysAsString = ($c) => {
    return ($) => {
