@@ -5,7 +5,7 @@ import { $$ as igetLengthAsString } from "./implementations/getLengthAsString.na
 import { $$ as igetNumberOfKeysAsString } from "./implementations/getNumberOfKeysAsString.native"
 import { $$ as ijoinNestedStrings } from "./implementations/joinNestedStrings.native"
 
-export const $a: API = {
+export const $r: API = {
     'getArrayAsString': igetArrayAsString,
     'getKeysAsString': igetKeysAsString,
     'getLengthAsString': igetLengthAsString,
