@@ -1,8 +1,8 @@
 
 
 
-import { CgetLengthAsString } from "../definition/api.generated"
+import {getLengthAsString } from "../definition/api.generated"
 
-export const $$:CgetLengthAsString = ($) => {
+export const $$: getLengthAsString = ($) => {
    return `${$.__getLength()}`
 }

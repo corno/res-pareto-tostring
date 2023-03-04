@@ -2,9 +2,9 @@
 
 import { post } from "../native/post.native"
 
-import { CgetKeysAsString } from "../definition/api.generated"
+import {getKeysAsString } from "../definition/api.generated"
 
-export const $$:CgetKeysAsString = ($c) => {
+export const $$: getKeysAsString = ($c) => {
    return ($) => {
       const foundKeys: string[] = []
       $.__mapWithKey(($, key) => {

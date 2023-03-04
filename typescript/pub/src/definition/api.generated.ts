@@ -1,21 +1,21 @@
 import * as pt from 'pareto-core-types'
 
-import * as gthis from "./glossary"
+import * as g_this from "./glossary"
 
-export type CgetArrayAsString = ($: gthis.T.Configuration, $d: {}) => gthis.FGetArrayAsString
+export type getArrayAsString = ($: g_this.T.Configuration, $d: {}) => g_this.F.GetArrayAsString
 
-export type CgetKeysAsString = ($: gthis.T.Configuration, $d: {}) => gthis.FGetKeysAsString
+export type getKeysAsString = ($: g_this.T.Configuration, $d: {}) => g_this.F.GetKeysAsString
 
-export type CgetLengthAsString = gthis.FGetLengthAsString
+export type getLengthAsString = g_this.F.GetLengthAsString
 
-export type CgetNumberOfKeysAsString = gthis.FGetNumberOfKeysAsString
+export type getNumberOfKeysAsString = g_this.F.GetNumberOfKeysAsString
 
-export type CjoinNestedStrings = ($: gthis.T.Configuration, $d: {}) => gthis.FJoinNestedStrings
+export type joinNestedStrings = ($: g_this.T.Configuration, $d: {}) => g_this.F.JoinNestedStrings
 
 export type API = {
-    getArrayAsString: CgetArrayAsString
-    getKeysAsString: CgetKeysAsString
-    getLengthAsString: CgetLengthAsString
-    getNumberOfKeysAsString: CgetNumberOfKeysAsString
-    joinNestedStrings: CjoinNestedStrings
+    getArrayAsString: getArrayAsString
+    getKeysAsString: getKeysAsString
+    getLengthAsString: getLengthAsString
+    getNumberOfKeysAsString: getNumberOfKeysAsString
+    joinNestedStrings: joinNestedStrings
 }

@@ -1,6 +1,6 @@
 import * as pt from 'pareto-core-types'
 
-import * as gcommon from "glo-pareto-common"
+import * as g_common from "glo-pareto-common"
 
 export namespace T {
     
@@ -46,14 +46,14 @@ export namespace T {
     
     export namespace NullArray {
         
-        export type A = null
+        export type T = null
     }
     
     export type NullArray = pt.Array<null>
     
     export namespace StringArray {
         
-        export type A = string
+        export type T = string
     }
     
     export type StringArray = pt.Array<string>

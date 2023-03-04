@@ -1,9 +1,9 @@
 
 
 
-import { CgetNumberOfKeysAsString } from "../definition/api.generated"
+import {getNumberOfKeysAsString } from "../definition/api.generated"
 
-export const $$:CgetNumberOfKeysAsString = ($) => {
+export const $$: getNumberOfKeysAsString = ($) => {
    let count = 0
    $.map(($) => {
        count += 1

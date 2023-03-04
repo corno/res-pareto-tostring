@@ -1,15 +1,22 @@
 import * as pt from 'pareto-core-types'
 
-import { T   } from './types.generated'
+import { T } from './types.generated'
 
-import * as gcommon from "glo-pareto-common"
+import * as g_common from "glo-pareto-common"
 
-export type FGetArrayAsString = ($: T.StringArray,) => gcommon.T.String
+export namespace I {}
 
-export type FGetKeysAsString = ($: T.Dictionary,) => gcommon.T.String
+export namespace B {}
 
-export type FGetLengthAsString = ($: T.NullArray,) => gcommon.T.String
-
-export type FGetNumberOfKeysAsString = ($: T.Dictionary,) => gcommon.T.String
-
-export type FJoinNestedStrings = ($: gcommon.T.Path,) => gcommon.T.String
+export namespace F {
+    
+    export type GetArrayAsString = ($: T.StringArray,) => g_common.T.String
+    
+    export type GetKeysAsString = ($: T.Dictionary,) => g_common.T.String
+    
+    export type GetLengthAsString = ($: T.NullArray,) => g_common.T.String
+    
+    export type GetNumberOfKeysAsString = ($: T.Dictionary,) => g_common.T.String
+    
+    export type JoinNestedStrings = ($: g_common.T.Path,) => g_common.T.String
+}

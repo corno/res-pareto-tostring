@@ -31,6 +31,7 @@ export const $: gglossary.T.Glossary<pd.SourceLocation> = {
         })),
         "Dictionary": type(dictionary(null_())),
     }),
+    'builders': d({}),
     'interfaces': d({}),
     'functions': d({
         "GetLengthAsString": func(typeReference("NullArray"), null, null, data(typeReference("common", "String"), false)),
