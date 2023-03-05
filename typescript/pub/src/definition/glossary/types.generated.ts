@@ -46,14 +46,14 @@ export namespace T {
     
     export namespace NullArray {
         
-        export type T = null
+        export type A = null
     }
     
     export type NullArray = pt.Array<null>
     
     export namespace StringArray {
         
-        export type T = string
+        export type A = string
     }
     
     export type StringArray = pt.Array<string>

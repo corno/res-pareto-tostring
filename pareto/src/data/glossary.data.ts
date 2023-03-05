@@ -26,7 +26,7 @@ export const $: gglossary.T.Glossary<pd.SourceLocation> = {
             "separator": member(string()),
             "maximum": member(optional(group({
                 "maximum": member(number()),
-                "suffix": member(string())
+                "suffix": member(string()),
             }))),
         })),
         "Dictionary": type(dictionary(null_())),

@@ -12,5 +12,5 @@ export const $: gapi.T.API<pd.SourceLocation> = {
         "getKeysAsString": algorithm(functionReference("this", {}, "GetKeysAsString"), constructor(typeReference("this", {}, "Configuration"), {})),
         "getNumberOfKeysAsString": algorithm(functionReference("this", {}, "GetNumberOfKeysAsString")),
         "joinNestedStrings": algorithm(functionReference("this", {}, "JoinNestedStrings"), constructor(typeReference("this", {}, "Configuration"), {})),
-    })
+    }),
 }
