@@ -1,7 +1,7 @@
 
 
 
-import {getNumberOfKeysAsString } from "../definition/api.generated"
+import {getNumberOfKeysAsString } from "../api.generated"
 
 export const $$: getNumberOfKeysAsString = ($) => {
    let count = 0

@@ -2,9 +2,9 @@
 
 import { post } from '../native/post.native'
 
-import {getArrayAsString } from "../definition/api.generated"
+import {getArrayAsString } from "../api.generated"
 
-export const $$: getArrayAsString = ($c, $d) => {
+export const $$: getArrayAsString = ($c) => {
   return ($) => {
     const tmp: string[] = []
     $.__forEach(($) => {

@@ -1,4 +1,4 @@
-import { API } from "./definition/api.generated"
+import { API } from "./api.generated"
 import { $$ as igetArrayAsString } from "./implementations/getArrayAsString.native"
 import { $$ as igetKeysAsString } from "./implementations/getKeysAsString.native"
 import { $$ as igetLengthAsString } from "./implementations/getLengthAsString.native"
