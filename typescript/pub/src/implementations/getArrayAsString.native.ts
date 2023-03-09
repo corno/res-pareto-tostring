@@ -2,7 +2,7 @@
 
 import { post } from '../native/post.native'
 
-import {getArrayAsString } from "../api.generated"
+import { getArrayAsString } from "../api.generated"
 
 export const $$: getArrayAsString = ($c) => {
   return ($) => {
