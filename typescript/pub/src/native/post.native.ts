@@ -1,8 +1,8 @@
-import * as gthis from "../glossary"
+import * as g_this from "../glossary"
 
 export function post(
     arr: string[],
-    conf: gthis.T.Configuration
+    conf: g_this.T.Configuration
 ) {
     const formatted = arr.map($ => `'${$}'`)
     if (conf.maximum[0] === true) {

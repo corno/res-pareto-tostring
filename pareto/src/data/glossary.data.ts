@@ -7,18 +7,23 @@ import {
     dictionary, member, taggedUnion, types, group,
     array,
     typeReference,
-    data,
-    func,
+    sdata,
+    sfunc,
     type,
     optional,
     number,
+    imp,
+    externalTypeReference,
 } from "lib-pareto-typescript-project/dist/submodules/glossary/shorthands"
 
-import * as gglossary from "lib-pareto-typescript-project/dist/submodules/glossary"
+import * as g_glossary from "lib-pareto-typescript-project/dist/submodules/glossary"
 const d = pd.d
 
-export const $: gglossary.T.Glossary<pd.SourceLocation> = {
+export const $: g_glossary.T.Glossary<pd.SourceLocation> = {
     'parameters': d({}),
+    'imports': d({
+        "common": imp({}),
+    }),
     'types': d({
         "NullArray": type(array(null_())),
         "StringArray": type(array(string())),
@@ -31,13 +36,15 @@ export const $: gglossary.T.Glossary<pd.SourceLocation> = {
         })),
         "Dictionary": type(dictionary(null_())),
     }),
-    'builders': d({}),
-    'interfaces': d({}),
-    'functions': d({
-        "GetLengthAsString": func(typeReference("NullArray"), null, null, data(typeReference("common", "String"), false)),
-        "GetArrayAsString": func(typeReference("StringArray"), null, null, data(typeReference("common", "String"), false)),
-        "GetKeysAsString": func(typeReference("Dictionary"), null, null, data(typeReference("common", "String"), false)),
-        "GetNumberOfKeysAsString": func(typeReference("Dictionary"), null, null, data(typeReference("common", "String"), false)),
-        "JoinNestedStrings": func(typeReference("common", "Path"), null, null, data(typeReference("common", "String"), false)),
-    }),
+    'type': ['synchronous', {
+        'builders': d({}),
+        'functions': d({
+            "GetLengthAsString": sfunc(typeReference("NullArray"), null, null, sdata(externalTypeReference("common", "String"))),
+            "GetArrayAsString": sfunc(typeReference("StringArray"), null, null, sdata(externalTypeReference("common", "String"))),
+            "GetKeysAsString": sfunc(typeReference("Dictionary"), null, null, sdata(externalTypeReference("common", "String"))),
+            "GetNumberOfKeysAsString": sfunc(typeReference("Dictionary"), null, null, sdata(externalTypeReference("common", "String"))),
+            "JoinNestedStrings": sfunc(externalTypeReference("common", "Path"), null, null, sdata(externalTypeReference("common", "String"))),
+        }),
+
+    }],
 }
