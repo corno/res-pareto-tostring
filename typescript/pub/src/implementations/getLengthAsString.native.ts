@@ -1,8 +1,8 @@
 
 
 
-import { getLengthAsString } from "../api.generated"
+import { A } from "../api.generated"
 
-export const $$: getLengthAsString = ($) => {
+export const $$: A. getLengthAsString = ($) => {
    return `${$.__getLength()}`
 }

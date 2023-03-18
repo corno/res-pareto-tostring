@@ -1,9 +1,9 @@
 
 
 
-import { getNumberOfKeysAsString } from "../api.generated"
+import { A } from "../api.generated"
 
-export const $$: getNumberOfKeysAsString = ($) => {
+export const $$: A. getNumberOfKeysAsString = ($) => {
    let count = 0
    $.map(($) => {
        count += 1

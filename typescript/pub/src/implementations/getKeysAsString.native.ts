@@ -2,9 +2,9 @@
 
 import { post } from "../native/post.native"
 
-import { getKeysAsString } from "../api.generated"
+import { A } from "../api.generated"
 
-export const $$: getKeysAsString = ($c) => {
+export const $$: A. getKeysAsString = ($c) => {
    return ($) => {
       const foundKeys: string[] = []
       $.__mapWithKey(($, key) => {

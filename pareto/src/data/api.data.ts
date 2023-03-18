@@ -1,16 +1,16 @@
 import * as pd from 'pareto-core-data'
 
-import { functionReference, constructor, algorithm, typeReference } from "lib-pareto-typescript-project/dist/submodules/project/shorthands"
+import { algorithm, dependent, sfunction, typeReference } from "lib-pareto-typescript-project/dist/submodules/project/shorthands"
 
 import * as g_project from "lib-pareto-typescript-project/dist/submodules/project"
 const d = pd.d
 
-export const $: g_project.T.Module.api.root<pd.SourceLocation> = {
+export const $: g_project.T.ModuleDefinition.api.root<pd.SourceLocation> = {
     'algorithms': d({
-        "getArrayAsString": algorithm(functionReference("this", {}, "GetArrayAsString"), constructor(typeReference("this", {}, "Configuration"), {})),
-        "getLengthAsString": algorithm(functionReference("this", {}, "GetLengthAsString")),
-        "getKeysAsString": algorithm(functionReference("this", {}, "GetKeysAsString"), constructor(typeReference("this", {}, "Configuration"), {})),
-        "getNumberOfKeysAsString": algorithm(functionReference("this", {}, "GetNumberOfKeysAsString")),
-        "joinNestedStrings": algorithm(functionReference("this", {}, "JoinNestedStrings"), constructor(typeReference("this", {}, "Configuration"), {})),
+        "getArrayAsString": algorithm(sfunction("this", {}, "GetArrayAsString"), dependent(typeReference("this", {}, "Configuration"), {}, {})),
+        "getLengthAsString": algorithm(sfunction("this", {}, "GetLengthAsString")),
+        "getKeysAsString": algorithm(sfunction("this", {}, "GetKeysAsString"), dependent(typeReference("this", {}, "Configuration"), {}, {})),
+        "getNumberOfKeysAsString": algorithm(sfunction("this", {}, "GetNumberOfKeysAsString")),
+        "joinNestedStrings": algorithm(sfunction("this", {}, "JoinNestedStrings"), dependent(typeReference("this", {}, "Configuration"), {}, {})),
     }),
 }

@@ -1,10 +1,10 @@
 
 
-import { post } from '../native/post.native'
+import { post } from "../native/post.native"
 
-import { getArrayAsString } from "../api.generated"
+import { A } from "../api.generated"
 
-export const $$: getArrayAsString = ($c) => {
+export const $$: A. getArrayAsString = ($c) => {
   return ($) => {
     const tmp: string[] = []
     $.__forEach(($) => {
