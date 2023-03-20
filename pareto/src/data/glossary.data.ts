@@ -26,18 +26,17 @@ export const $: g_glossary.T.Glossary<pd.SourceLocation> = {
     }),
     'asynchronous': {
         'interfaces': d({}),
-        'constructors': d({}),
-        'functions': d({}),
+        'algorithms': d({}),
+        
     },
     'synchronous': {
         'interfaces': d({}),
-        'constructors': d({}),
-        'functions': d({
-            "GetLengthAsString": sfunction(data(typeReference("NullArray")), externalTypeReference("common", "String")),
-            "GetArrayAsString": sfunction(data(typeReference("StringArray")), externalTypeReference("common", "String")),
-            "GetKeysAsString": sfunction(data(typeReference("Dictionary")), externalTypeReference("common", "String")),
-            "GetNumberOfKeysAsString": sfunction(data(typeReference("Dictionary")), externalTypeReference("common", "String")),
-            "JoinNestedStrings": sfunction(data(externalTypeReference("common", "Path")), externalTypeReference("common", "String")),
+        'algorithms': d({
+            "GetLengthAsString": sfunction(externalTypeReference("common", "String"), data(typeReference("NullArray"))),
+            "GetArrayAsString": sfunction(externalTypeReference("common", "String"), data(typeReference("StringArray"))),
+            "GetKeysAsString": sfunction(externalTypeReference("common", "String"), data(typeReference("Dictionary"))),
+            "GetNumberOfKeysAsString": sfunction(externalTypeReference("common", "String"), data(typeReference("Dictionary"))),
+            "JoinNestedStrings": sfunction(externalTypeReference("common", "String"), data(externalTypeReference("common", "Path"))),
         }),
     },
 }

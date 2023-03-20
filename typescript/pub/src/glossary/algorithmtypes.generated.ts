@@ -8,35 +8,40 @@ export namespace ASYNC {
     
     export namespace I {}
     
-    export namespace C {}
-    
-    export namespace F {}
+    export namespace A {}
 }
 
 export namespace SYNC {
     
     export namespace I {}
     
-    export namespace I2 {}
+    export namespace IW {}
     
-    export namespace I3 {}
-    
-    export namespace C {}
-    
-    export namespace C2 {}
-    
-    export namespace C3 {}
-    
-    export namespace F {
+    export namespace A {
         
-        export type GetArrayAsString = ($: T.StringArray) => g_common.T.String
         
-        export type GetKeysAsString = ($: T.Dictionary) => g_common.T.String
+        export namespace F {
+            export type GetArrayAsString = ($: T.StringArray) => g_common.T.String
+        }
         
-        export type GetLengthAsString = ($: T.NullArray) => g_common.T.String
         
-        export type GetNumberOfKeysAsString = ($: T.Dictionary) => g_common.T.String
+        export namespace F {
+            export type GetKeysAsString = ($: T.Dictionary) => g_common.T.String
+        }
         
-        export type JoinNestedStrings = ($: g_common.T.Path) => g_common.T.String
+        
+        export namespace F {
+            export type GetLengthAsString = ($: T.NullArray) => g_common.T.String
+        }
+        
+        
+        export namespace F {
+            export type GetNumberOfKeysAsString = ($: T.Dictionary) => g_common.T.String
+        }
+        
+        
+        export namespace F {
+            export type JoinNestedStrings = ($: g_common.T.Path) => g_common.T.String
+        }
     }
 }
