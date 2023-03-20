@@ -8,9 +8,9 @@ export namespace A {
     
     export type getKeysAsString = ($: g_this.T.Configuration, $d: null, $se: null) => g_this.SYNC.A.F.GetKeysAsString
     
-    export type getLengthAsString = g_this.SYNC.A.F.GetLengthAsString
+    export type getLengthAsString = () => g_this.SYNC.A.F.GetLengthAsString
     
-    export type getNumberOfKeysAsString = g_this.SYNC.A.F.GetNumberOfKeysAsString
+    export type getNumberOfKeysAsString = () => g_this.SYNC.A.F.GetNumberOfKeysAsString
     
     export type joinNestedStrings = ($: g_this.T.Configuration, $d: null, $se: null) => g_this.SYNC.A.F.JoinNestedStrings
 }
