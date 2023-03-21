@@ -4,15 +4,15 @@ import * as g_this from "./glossary"
 
 export namespace A {
     
-    export type getArrayAsString = ($: g_this.T.Configuration, $d: null, $se: null) => g_this.SYNC.A.F.GetArrayAsString
+    export type getArrayAsString = ($: g_this.T.Configuration, ) => g_this.SYNC.A.F.GetArrayAsString
     
-    export type getKeysAsString = ($: g_this.T.Configuration, $d: null, $se: null) => g_this.SYNC.A.F.GetKeysAsString
+    export type getKeysAsString = ($: g_this.T.Configuration, ) => g_this.SYNC.A.F.GetKeysAsString
     
     export type getLengthAsString = () => g_this.SYNC.A.F.GetLengthAsString
     
     export type getNumberOfKeysAsString = () => g_this.SYNC.A.F.GetNumberOfKeysAsString
     
-    export type joinNestedStrings = ($: g_this.T.Configuration, $d: null, $se: null) => g_this.SYNC.A.F.JoinNestedStrings
+    export type joinNestedStrings = ($: g_this.T.Configuration, ) => g_this.SYNC.A.F.JoinNestedStrings
 }
 
 export type API = {
