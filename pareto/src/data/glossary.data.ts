@@ -12,22 +12,25 @@ export const $: g_glossary.T.Glossary<pd.SourceLocation> = {
     'imports': d({
         "common": imp({}),
     }),
-    'types': d({
-        "NullArray": type(array(null_())),
-        "StringArray": type(array(string())),
-        "Configuration": type(group({
-            "separator": member(string()),
-            "maximum": member(optional(group({
-                "maximum": member(number()),
-                "suffix": member(string()),
-            }))),
-        })),
-        "Dictionary": type(dictionary(null_())),
-    }),
+    'root': {
+        'namespaces': d({}),
+        'types': d({
+            "NullArray": type(array(null_())),
+            "StringArray": type(array(string())),
+            "Configuration": type(group({
+                "separator": member(string()),
+                "maximum": member(optional(group({
+                    "maximum": member(number()),
+                    "suffix": member(string()),
+                }))),
+            })),
+            "Dictionary": type(dictionary(null_())),
+        }),
+    },
     'asynchronous': {
         'interfaces': d({}),
         'algorithms': d({}),
-        
+
     },
     'synchronous': {
         'interfaces': d({}),
