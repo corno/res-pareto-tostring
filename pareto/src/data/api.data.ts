@@ -11,6 +11,5 @@ export const $: g_project.T.ModuleDefinition.api.root<pd.SourceLocation> = {
         "getLengthAsString": algorithm(sfunction("this", {}, "GetLengthAsString")),
         "getKeysAsString": algorithm(sfunction("this", {}, "GetKeysAsString"), {}, dependent(data("this", {}, "Configuration"), {}, {})),
         "getNumberOfKeysAsString": algorithm(sfunction("this", {}, "GetNumberOfKeysAsString")),
-        "joinNestedStrings": algorithm(sfunction("this", {}, "JoinNestedStrings"), {}, dependent(data("this", {}, "Configuration"), {}, {})),
     }),
 }

@@ -7,7 +7,6 @@ export namespace D {
     
     
     
-    
 }
 
 export namespace A {
@@ -19,8 +18,6 @@ export namespace A {
     export type getLengthAsString = () => g_this.SYNC.A.F.GetLengthAsString
     
     export type getNumberOfKeysAsString = () => g_this.SYNC.A.F.GetNumberOfKeysAsString
-    
-    export type joinNestedStrings = ($: g_this.T.Configuration, ) => g_this.SYNC.A.F.JoinNestedStrings
 }
 
 export type API = {
@@ -28,5 +25,4 @@ export type API = {
     readonly 'getKeysAsString': A.getKeysAsString
     readonly 'getLengthAsString': A.getLengthAsString
     readonly 'getNumberOfKeysAsString': A.getNumberOfKeysAsString
-    readonly 'joinNestedStrings': A.joinNestedStrings
 }

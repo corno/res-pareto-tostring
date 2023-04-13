@@ -34,10 +34,5 @@ export namespace SYNC {
         export namespace F {
             export type GetNumberOfKeysAsString = ($: T.Dictionary) => g_common.T.String
         }
-        
-        
-        export namespace F {
-            export type JoinNestedStrings = ($: g_common.T.Path) => g_common.T.String
-        }
     }
 }

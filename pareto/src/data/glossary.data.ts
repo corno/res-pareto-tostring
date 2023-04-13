@@ -39,7 +39,6 @@ export const $: g_glossary.T.Glossary<pd.SourceLocation> = {
             "GetArrayAsString": sfunction(externalTypeReference("common", "String"), data(typeReference("StringArray"))),
             "GetKeysAsString": sfunction(externalTypeReference("common", "String"), data(typeReference("Dictionary"))),
             "GetNumberOfKeysAsString": sfunction(externalTypeReference("common", "String"), data(typeReference("Dictionary"))),
-            "JoinNestedStrings": sfunction(externalTypeReference("common", "String"), data(externalTypeReference("common", "Path"))),
         }),
     },
 }
